@@ -1,0 +1,190 @@
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+@media screen and (max-width: 1023px) {
+  .container {
+    max-width: 70vw;
+  }
+  .tittle {
+    letter-spacing: 5px;
+  }
+  form {
+    padding: 5px 15px;
+  }
+  input {
+    font-size: 0.7em;
+    margin-bottom: 5px;
+    min-width: 60vw;
+  }
+  li {
+    font-size: 0.9em;
+  }
+  label {
+    font-size: 0.7em;
+    margin-bottom: 5px;
+  }
+  ul li.checked::before {
+    min-width: 10px;
+    min-height: 10px;
+    margin-right: 10px;
+  }
+  #filter {
+    font-size: 0.7em;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .cross {
+    max-height: 20px;
+    margin-left: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 50vw;
+  }
+  .tittle {
+    letter-spacing: 15px;
+  }
+  form {
+    padding: 10px 30px;
+  }
+  input {
+    font-size: 1.1em;
+    min-width: 25vw;
+  }
+  li {
+    font-size: 1.1em;
+  }
+  ul li.checked::before {
+    min-width: 15px;
+    min-height: 15px;
+    margin-right: 15px;
+  }
+  #filter {
+    font-size: 1.1em;
+    justify-content: center;
+  }
+  .cross {
+    max-height: 10px;
+    margin-left: 10px;
+  }
+}
+
+header.light {
+  background-image: url("../images/bg-desktop-light.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: all;
+  height: 25vh;
+}
+h1 {
+  color: rgb(255, 255, 255);
+}
+.container {
+  position: relative;
+  top: -150px;
+  margin: 0 auto;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+select:last-child {
+  justify-content: flex-end;
+}
+input {
+  min-height: 4vh;
+  border: black 1px;
+  padding: 5px;
+}
+
+ul {
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 6px 7px 14px 0px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 6px 7px 14px 0px rgba(0, 0, 0, 0.22);
+  box-shadow: 6px 7px 14px 0px rgba(0, 0, 0, 0.22);
+}
+li {
+  list-style: none;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  word-break: break-word;
+  user-select: none;
+}
+li:last-child {
+  border-radius: 0 0 15px 15px;
+}
+li:first-child {
+  border-radius: 15px 15px 0 0;
+}
+
+li.important {
+  background-color: rgba(255, 187, 60, 0.8);
+}
+li.v-important {
+  background-color: rgba(255, 88, 88, 0.801);
+}
+li.critical {
+  background-color: hsl(235, 23%, 29%);
+}
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  color: #888;
+  text-decoration: line-through;
+}
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: url("../images/checkmark.svg");
+}
+#filter {
+  display: flex;
+  margin-bottom: 15px;
+  background-color: white;
+  border: 1px rgba(170, 170, 170, 0.5) solid;
+  border-radius: 15px;
+  padding: 15px;
+  -webkit-box-shadow: 6px 7px 14px 0px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 6px 7px 14px 0px rgba(0, 0, 0, 0.22);
+  box-shadow: 6px 7px 14px 0px rgba(0, 0, 0, 0.22);
+}
+
+#task-left {
+  margin-right: 15px;
+  font-weight: 700;
+}
+
+#drag {
+  text-align: center;
+}
+a {
+  color: inherit;
+  cursor: pointer;
+  margin-right: 20px;
+}
+a:hover {
+  color: hsl(236, 33%, 92%);
+}
